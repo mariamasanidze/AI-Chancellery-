@@ -85,11 +85,10 @@
 
   /* hero */
   .hero{padding:clamp(44px,7vw,80px) 0 clamp(54px,8vw,90px)}
-  .hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(36px,5vw,60px);align-items:center}
+  .hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(36px,5vw,60px);align-items:start}
+  .hero .eyebrow{line-height:1}
   .hero h1{font-size:clamp(2.15rem,4.6vw,3.4rem);margin:20px 0 0}
-  .hero h1 .hl{color:var(--brand);background:linear-gradient(var(--gold-soft),var(--gold-soft));
-    background-size:100% .22em;background-position:0 92%;background-repeat:no-repeat;
-    -webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .04em}
+  .hero h1 .hl{color:var(--brand)}
   .hero p.lead{margin:20px 0 0;max-width:33em}
   .hero-cta{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}
   .hero-trust{display:flex;gap:12px 22px;margin-top:28px;flex-wrap:wrap;align-items:center}
@@ -188,23 +187,6 @@
   .feat .fi svg{width:24px;height:24px;stroke:var(--brand);stroke-width:1.6}
   .feat h3{font-size:1.14rem;font-weight:700}.feat p{color:var(--muted);font-size:.92rem;margin-top:10px}
 
-  /* spotlight archive */
-  .spot{grid-column:span 2;background:linear-gradient(120deg,var(--brand-tint),var(--card) 55%);border-color:var(--brand-line);
-    display:grid;grid-template-columns:.92fr 1.08fr;gap:30px;align-items:center}
-  .spot h3{font-size:1.36rem}
-  .arch{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--shadow-sm)}
-  .arch .asearch{display:flex;align-items:center;gap:9px;padding:11px 13px;border-bottom:1px solid var(--line);background:var(--paper-2)}
-  .arch .asearch svg{width:15px;height:15px;stroke:var(--muted);flex:none}
-  .arch .asearch .q{font-family:"DM Mono",monospace;font-size:.75rem;color:var(--ink)}
-  .arch .asearch .q b{color:var(--muted-2);font-weight:400}
-  .arow{display:grid;grid-template-columns:66px 1fr auto;gap:10px;align-items:center;padding:10px 13px;border-top:1px solid var(--line);font-size:.79rem}
-  .arow:first-of-type{border-top:none}
-  .arow .rn{font-family:"DM Mono",monospace;font-size:.72rem;color:var(--gold-2)}
-  .arow .sub b{color:var(--ink);font-weight:600}.arow .sub span{color:var(--muted-2);font-family:"DM Mono",monospace;font-size:.65rem;margin-left:6px}
-  .arow .stt{font-size:.67rem;font-family:"DM Mono",monospace;padding:.28em .55em;border-radius:5px;white-space:nowrap}
-  .arow .stt.done{background:var(--brand-soft);color:var(--brand)}
-  .arow .stt.arch{background:var(--paper);color:var(--muted);border:1px solid var(--line)}
-
   /* adapt band */
   .adapt{background:var(--green-dark);color:#cfe0d6;border-radius:24px;padding:clamp(36px,5vw,60px);position:relative;overflow:hidden}
   .adapt::before{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(174,132,58,.28),transparent 70%)}
@@ -294,7 +276,7 @@
     .hero-grid{grid-template-columns:1fr;gap:40px}.flow{max-width:560px}
     .stats .wrap{grid-template-columns:1fr 1fr;gap:26px}.stat:nth-child(2){border-right:none;padding-right:0}
     .steps{grid-template-columns:1fr 1fr}
-    .feat-grid{grid-template-columns:1fr 1fr}.spot{grid-column:1/-1;grid-template-columns:1fr;gap:28px}
+    .feat-grid{grid-template-columns:1fr 1fr}
     .adapt-grid,.sec-grid{grid-template-columns:1fr;gap:32px}
     .cta-card{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr;gap:32px}
   }
@@ -303,7 +285,6 @@
     .stats .wrap{grid-template-columns:1fr 1fr;gap:22px}
     .steps{grid-template-columns:1fr}.feat-grid{grid-template-columns:1fr}
     .frow2{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}
-    .arow{grid-template-columns:52px 1fr;row-gap:4px}.arow .stt{grid-column:2}
     .lang-tog .lang-btn{padding:.5em .6em}
   }
 </style>
@@ -502,20 +483,10 @@
         <p data-i="f4.p"></p>
       </article>
 
-      <!-- SPOTLIGHT: archive & search -->
-      <article class="feat spot reveal">
-        <div>
-          <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-          <h3 data-i="spot.h"></h3>
-          <p data-i="spot.p"></p>
-        </div>
-        <div class="arch">
-          <div class="asearch"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-            <span class="q"><span data-i="arch.q"></span> <b>· 2026</b></span></div>
-          <div class="arow"><span class="rn">№ 04-217</span><span class="sub"><b data-i="arch.r1sub"></b><span data-i="arch.r1topic"></span></span><span class="stt done" data-i="arch.stReplied"></span></div>
-          <div class="arow"><span class="rn">№ 04-198</span><span class="sub"><b data-i="arch.r2sub"></b><span data-i="arch.r2topic"></span></span><span class="stt arch" data-i="arch.stArch"></span></div>
-          <div class="arow"><span class="rn">№ 04-155</span><span class="sub"><b data-i="arch.r3sub"></b><span data-i="arch.r3topic"></span></span><span class="stt done" data-i="arch.stReplied"></span></div>
-        </div>
+      <article class="feat reveal">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3 data-i="spot.h"></h3>
+        <p data-i="spot.p"></p>
       </article>
 
       <article class="feat reveal">
@@ -671,7 +642,7 @@ var I18N = {
   "nav.learn":"გაიგე მეტი","nav.book":"დემოს მოთხოვნა",
   "hero.eyebrow":"კორესპონდენციის მართვა · AI",
   "hero.h1":"შემოსული წერილიდან — მზა, <span class=\"hl\">ხელმოწერილ პასუხამდე</span>.",
-  "hero.lead":"AI Chancellery კითხულობს შემოსულ კორესპონდენციას, განსაზღვრავს თემას, გადაუდებლობასა და განყოფილებას, სწორ ადრესატს უგზავნის და პასუხის პირველ ვარიანტს თქვენივე კორპორატიული სტილით ამზადებს.",
+  "hero.lead":"AI Chancellery ავტომატურად ამუშავებს შემოსულ კორესპონდენციას — განსაზღვრავს თემას, პრიორიტეტსა და პასუხისმგებელ განყოფილებას, სწორ თანამშრომელთან აგზავნის და თქვენი ორგანიზაციის კორპორატიული სტილის შესაბამისად ამზადებს პასუხის პირველ ვერსიას.",
   "hero.cta1":"დემოს მოთხოვნა","hero.cta2":"ნახე როგორ მუშაობს",
   "hero.t1":"AI პასუხის დრაფტი","hero.t2":"ელ-ხელმოწერა და ბეჭედი","hero.t3":"ძებნადი არქივი",
   "flow.title":"შემოსული კორესპონდენცია",
@@ -692,12 +663,12 @@ var I18N = {
   "stat4.l":"შემოსული წერილების ავტომ. დამუშავება",
   "how.eyebrow":"პროცესი","how.h2":"წერილიდან არქივამდე — ოთხ ნაბიჯში",
   "how.lead":"სისტემა ფონურად მუშაობს. თანამშრომელი ინარჩუნებს კონტროლს — AI მხოლოდ ამზადებს, გადაწყვეტილებას ადამიანი იღებს.",
-  "step1.h":"წერილი შემოდის","step1.p":"ელ.ფოსტა ან სხვა არხი — სისტემა წერილს ავტომატურად იღებს და კითხულობს.",
+  "step1.h":"წერილი შემოდის","step1.p":"ელ.ფოსტა ან სხვა არხიდან შემოსული წერილი ავტომატურად იკითხება და რეგისტრირდება.",
   "step2.h":"AI აანალიზებს","step2.p":"განისაზღვრება თემა, გადაუდებლობა და საჭირო განყოფილება.",
   "step3.h":"მარშრუტიზაცია და დრაფტი","step3.p":"წერილი სწორ თანამშრომელს ეგზავნება, AI კი პასუხის პირველ ვარიანტს ამზადებს.",
   "step4.h":"დადასტურება და ხელმოწერა","step4.p":"თანამშრომელი ამოწმებს, აწერს ხელს ბეჭდით და წერილი არქივში ინახება.",
   "feat.eyebrow":"შესაძლებლობები","feat.h2":"მთელი კანცელარია — ერთ სისტემაში",
-  "feat.lead":"შემოსული წერილის დამუშავებიდან ხელმოწერასა და ძებნად არქივამდე.",
+  "feat.lead":"შემოსული კორესპონდენციის მიღებიდან ხელმოწერასა და არქივამდე, ყველაფერი ერთ სივრცეში.",
   "f1.h":"შემოსული კორესპონდენციის დამუშავება","f1.p":"სისტემა ელ.ფოსტიდან ან სხვა არხებიდან შემოსულ წერილებს კითხულობს და განსაზღვრავს თემას, გადაუდებლობასა და საჭირო განყოფილებას.",
   "f2.h":"ავტომატური მარშრუტიზაცია","f2.p":"წერილი სწორ თანამშრომელს ან განყოფილებას ეგზავნება წინასწარ განსაზღვრული წესების მიხედვით.",
   "f3.h":"პასუხის გენერაცია","f3.p":"AI ამზადებს პასუხის პირველ ვარიანტს ორგანიზაციის კორპორატიული სტილის შაბლონით. თანამშრომელს რჩება დადასტურება და საჭიროებისამებრ კორექტირება.",
@@ -718,7 +689,7 @@ var I18N = {
   "ti3.b":"სრული აუდიტ-ლოგი","ti3.p":"ყოველი მოქმედება — ვინ, როდის, რა — ჩაიწერება.",
   "audit.head":"აუდიტ-ლოგი · № 04-217","name.ber":"ნ. ბერიძე","name.mai":"გ. მაისურაძე",
   "audit.r1act":"— პასუხის დამტკიცება","audit.r2act":"— კორექტირება","audit.r3act":"— პასუხის დრაფტის მომზადება","audit.r4act":"— მარშრუტიზაცია: იურიდიული",
-  "faq.eyebrow":"ხშირი კითხვები","faq.h2":"რაც ხშირად გვეკითხებიან",
+  "faq.eyebrow":"ხშირი კითხვები","faq.h2":"ხშირად დასმული კითხვები",
   "q1":"აგზავნის თუ არა AI პასუხს ავტომატურად?",
   "a1":"არა. AI მხოლოდ ამზადებს პასუხის პირველ ვარიანტს. თანამშრომელი ამოწმებს, საჭიროებისამებრ ასწორებს და მხოლოდ დადასტურების შემდეგ ფორმდება ხელმოწერითა და ბეჭდით. გადაწყვეტილებას ყოველთვის ადამიანი იღებს.",
   "q2":"რომელი არხებიდან იღებს წერილებს?",
@@ -753,7 +724,7 @@ var I18N = {
   "nav.learn":"Learn more","nav.book":"Request a demo",
   "hero.eyebrow":"Correspondence management · AI",
   "hero.h1":"From an inbound letter to a ready, <span class=\"hl\">signed reply</span>.",
-  "hero.lead":"AI Chancellery reads incoming correspondence, determines the topic, urgency and department, routes it to the right person, and drafts a first reply in your own corporate style.",
+  "hero.lead":"AI Chancellery automatically processes incoming correspondence by identifying the topic, priority, and responsible department, routing each letter to the right employee, and preparing the first reply draft in your organization's corporate style.",
   "hero.cta1":"Request a demo","hero.cta2":"See how it works",
   "hero.t1":"AI reply draft","hero.t2":"E-signature & seal","hero.t3":"Searchable archive",
   "flow.title":"Inbound correspondence",
