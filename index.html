@@ -271,22 +271,53 @@
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
-  @media (max-width:960px){
+  /* @media (max-width:960px){
     .nav-links{display:none}.hamburger{display:flex}.nav-cta .btn-ghost{display:none}
     .hero-grid{grid-template-columns:1fr;gap:40px}.flow{max-width:560px}
     .stats .wrap{grid-template-columns:1fr 1fr;gap:26px}.stat:nth-child(2){border-right:none;padding-right:0}
     .steps{grid-template-columns:1fr 1fr}
     .feat-grid{grid-template-columns:1fr 1fr}
     .adapt-grid,.sec-grid{grid-template-columns:1fr;gap:32px}
-    .cta-card{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+  @media (max-width:960px){
+  .cta-card{grid-template-columns:1fr}
+  .cta-left{padding-bottom:28px}
+  .cta-right{border-top:1px solid var(--line);padding-top:30px}
+}
   }
+ 
   @media (max-width:600px){
     .wrap{padding:0 18px}.nav-cta .btn-primary{display:none}.brand{font-size:1rem}.brand .logo{width:30px;height:30px}
     .stats .wrap{grid-template-columns:1fr 1fr;gap:22px}
     .steps{grid-template-columns:1fr}.feat-grid{grid-template-columns:1fr}
     .frow2{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}
     .lang-tog .lang-btn{padding:.5em .6em}
+  } */
+
+   @media (max-width:960px){
+  .nav-links{display:none}.hamburger{display:flex}.nav-cta .btn-ghost{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:40px}.flow{max-width:560px}
+  .stats .wrap{grid-template-columns:1fr 1fr;gap:26px}.stat:nth-child(2){border-right:none;padding-right:0}
+  .steps{grid-template-columns:1fr 1fr}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .adapt-grid,.sec-grid{grid-template-columns:1fr;gap:32px}
+  .cta-card{grid-template-columns:1fr}
+  .cta-left{padding-bottom:24px}
+  .cta-right{
+    border-top:1px solid var(--line-2);
+    background:var(--paper);
+    padding-top:32px;
+    margin-top:4px;
   }
+}
+
+
+@media (max-width:600px){
+  .wrap{padding:0 18px}.nav-cta .btn-primary{display:none}.brand{font-size:1rem}.brand .logo{width:30px;height:30px}
+  .stats .wrap{grid-template-columns:1fr 1fr;gap:22px}
+  .steps{grid-template-columns:1fr}.feat-grid{grid-template-columns:1fr}
+  .frow2{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}
+  .lang-tog .lang-btn{padding:.5em .6em}
+}
 </style>
 </head>
 <body>
@@ -342,11 +373,11 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="#how" class="btn btn-ghost btn-lg" data-i="hero.cta2"></a>
       </div>
-      <div class="hero-trust">
+      <!-- <div class="hero-trust">
         <span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i="hero.t1"></span></span>
         <span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i="hero.t2"></span></span>
         <span class="ht"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i="hero.t3"></span></span>
-      </div>
+      </div> -->
     </div>
 
     <!-- SIGNATURE: LIFECYCLE -->
@@ -627,7 +658,7 @@
     </div>
     <div class="foot-bot">
       <span data-i="foot.rights"></span>
-      <span class="mono">v0.3</span>
+     
     </div>
   </div>
 </footer>
@@ -637,12 +668,13 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 var I18N = {
  ka:{
-  "meta.title":"AI Chancellery — კორპორატიული კორესპონდენციის მართვა",
+  "meta.title":"AI Chancellery  კორპორატიული კორესპონდენციის მართვა",
   "nav.how":"როგორ მუშაობს","nav.features":"შესაძლებლობები","nav.security":"უსაფრთხოება",
   "nav.learn":"გაიგე მეტი","nav.book":"დემოს მოთხოვნა",
   "hero.eyebrow":"კორესპონდენციის მართვა · AI",
-  "hero.h1":"შემოსული წერილიდან — მზა, <span class=\"hl\">ხელმოწერილ პასუხამდე</span>.",
-  "hero.lead":"AI Chancellery ავტომატურად ამუშავებს შემოსულ კორესპონდენციას — განსაზღვრავს თემას, პრიორიტეტსა და პასუხისმგებელ განყოფილებას, სწორ თანამშრომელთან აგზავნის და თქვენი ორგანიზაციის კორპორატიული სტილის შესაბამისად ამზადებს პასუხის პირველ ვერსიას.",
+  // "hero.h1":"შემოსული წერილიდან მზა, <span class=\"hl\">ხელმოწერილ პასუხამდე</span>.",
+  "hero.h1":"შემოსული წერილიდან, მზა,<br class=\"desktop-only\"> <span class=\"hl\">ხელმოწერილ პასუხამდე</span>.",
+  "hero.lead":"AI Chancellery ავტომატურად ამუშავებს შემოსულ კორესპონდენციას განსაზღვრავს თემას, პრიორიტეტსა და პასუხისმგებელ განყოფილებას, სწორ თანამშრომელთან აგზავნის და თქვენი ორგანიზაციის კორპორატიული სტილის შესაბამისად ამზადებს პასუხის პირველ ვერსიას.",
   "hero.cta1":"დემოს მოთხოვნა","hero.cta2":"ნახე როგორ მუშაობს",
   "hero.t1":"AI პასუხის დრაფტი","hero.t2":"ელ-ხელმოწერა და ბეჭედი","hero.t3":"ძებნადი არქივი",
   "flow.title":"შემოსული კორესპონდენცია",
@@ -652,58 +684,58 @@ var I18N = {
   "anz.lbl":"AI ანალიზი",
   "tag.topicK":"თემა","tag.topicV":"ხელშეკრულება","tag.urgK":"გადაუდებლობა","tag.urgV":"მაღალი","tag.deptK":"განყოფილება","tag.deptV":"იურიდიული",
   "route.lbl":"მარშრუტიზაცია:","route.dept":"იურიდიული განყოფილება","route.who":"ნ. ბერიძე",
-  "draft.tag":"AI · დრაფტი","draft.label":"პასუხის პირველი ვარიანტი — კორპორატიული სტილით",
+  "draft.tag":"AI · დრაფტი","draft.label":"პასუხის პირველი ვარიანტი  კორპორატიული სტილით",
   "sign.cap":"დამტკიცდა · ხელმოწერა",
   "seal.txt":"· ოფიციალური დოკუმენტი · დამოწმებულია ",
   "archived.txt":"დარეგისტრირდა და დაარქივდა",
   "flow.st.proc":"მუშავდება","flow.st.sign":"მოწმდება","flow.st.done":"დამტკიცებული",
-  "stat1.n":"წუთებში","stat1.l":"წაკითხვიდან პასუხის დრაფტამდე",
+  "stat1.n":"1 წუთი","stat1.l":"წაკითხვიდან პასუხის გაცემამდე",
   "stat2.n":"1 ღილაკი","stat2.l":"ელ-ხელმოწერა და ბეჭედი",
   "stat3.l":"კორესპონდენცია არქივში — ძებნადი",
   "stat4.l":"შემოსული წერილების ავტომ. დამუშავება",
-  "how.eyebrow":"პროცესი","how.h2":"წერილიდან არქივამდე — ოთხ ნაბიჯში",
-  "how.lead":"სისტემა ფონურად მუშაობს. თანამშრომელი ინარჩუნებს კონტროლს — AI მხოლოდ ამზადებს, გადაწყვეტილებას ადამიანი იღებს.",
+  "how.eyebrow":"პროცესი","how.h2":"წერილიდან არქივამდე  ოთხ ნაბიჯში",
+  "how.lead":"სისტემა ფონურად მუშაობს. თანამშრომელი ინარჩუნებს კონტროლს AI მხოლოდ ამზადებს, გადაწყვეტილებას ადამიანი იღებს.",
   "step1.h":"წერილი შემოდის","step1.p":"ელ.ფოსტა ან სხვა არხიდან შემოსული წერილი ავტომატურად იკითხება და რეგისტრირდება.",
   "step2.h":"AI აანალიზებს","step2.p":"განისაზღვრება თემა, გადაუდებლობა და საჭირო განყოფილება.",
   "step3.h":"მარშრუტიზაცია და დრაფტი","step3.p":"წერილი სწორ თანამშრომელს ეგზავნება, AI კი პასუხის პირველ ვარიანტს ამზადებს.",
   "step4.h":"დადასტურება და ხელმოწერა","step4.p":"თანამშრომელი ამოწმებს, აწერს ხელს ბეჭდით და წერილი არქივში ინახება.",
-  "feat.eyebrow":"შესაძლებლობები","feat.h2":"მთელი კანცელარია — ერთ სისტემაში",
+  "feat.eyebrow":"შესაძლებლობები","feat.h2":"მთელი კანცელარია ერთ სისტემაში",
   "feat.lead":"შემოსული კორესპონდენციის მიღებიდან ხელმოწერასა და არქივამდე, ყველაფერი ერთ სივრცეში.",
   "f1.h":"შემოსული კორესპონდენციის დამუშავება","f1.p":"სისტემა ელ.ფოსტიდან ან სხვა არხებიდან შემოსულ წერილებს კითხულობს და განსაზღვრავს თემას, გადაუდებლობასა და საჭირო განყოფილებას.",
   "f2.h":"ავტომატური მარშრუტიზაცია","f2.p":"წერილი სწორ თანამშრომელს ან განყოფილებას ეგზავნება წინასწარ განსაზღვრული წესების მიხედვით.",
   "f3.h":"პასუხის გენერაცია","f3.p":"AI ამზადებს პასუხის პირველ ვარიანტს ორგანიზაციის კორპორატიული სტილის შაბლონით. თანამშრომელს რჩება დადასტურება და საჭიროებისამებრ კორექტირება.",
   "f4.h":"ელ-ხელმოწერა და ბეჭედი","f4.p":"დამტკიცებული პასუხი ელექტრონული ხელმოწერითა და ბეჭდით ფორმდება ერთი ღილაკით.",
-  "spot.h":"არქივი და ძებნა","spot.p":"ყველა გამოგზავნილი და მიღებული კორესპონდენცია სისტემაში ინახება და ძებნადია — ნებისმიერი წერილი წამებში მოიძებნება ნომრით, თემით ან თარიღით.",
+  "spot.h":"არქივი და ძებნა","spot.p":"ყველა გამოგზავნილი და მიღებული კორესპონდენცია სისტემაში ინახება და ძებნადია  ნებისმიერი წერილი წამებში მოიძებნება ნომრით, თემით ან თარიღით.",
   "arch.q":"ხელშეკრულება","arch.r1sub":"შ.პ.ს „ალფა“","arch.r1topic":"ხელშეკრულება","arch.r2sub":"სამინისტრო","arch.r2topic":"მოთხოვნა","arch.r3sub":"მოქალაქე","arch.r3topic":"განცხადება",
   "arch.stReplied":"პასუხგაცემული","arch.stArch":"არქივში",
   "f5.h":"სკანირებული დოკუმენტების ატვირთვა","f5.p":"სკანირებული დოკუმენტების ბაზაში ატვირთვა და იმავე ერთიან არქივში მოძიება.",
   "adapt.eyebrow":"თქვენზე მორგებული","adapt.h2":"ვაწყობთ სისტემას თქვენი სტრუქტურისა და სტილის მიხედვით",
-  "adapt.lead":"ჩვენ ყოველ ორგანიზაციასთან ინდივიდუალურად ვაყალიბებთ განყოფილებების სტრუქტურას, მარშრუტიზაციის წესებსა და კორპორატიული პასუხების სტილს — მიიღებთ თქვენზე ზუსტად მორგებულ სისტემას.",
+  "adapt.lead":"ჩვენ ყოველ ორგანიზაციასთან ინდივიდუალურად ვაყალიბებთ განყოფილებების სტრუქტურას, მარშრუტიზაციის წესებსა და კორპორატიული პასუხების სტილს  მიიღებთ თქვენზე ზუსტად მორგებულ სისტემას.",
   "al1.b":"სტრუქტურის მორგება","al1.p":"განყოფილებები და მარშრუტიზაციის წესები თქვენი ორგანიზაციის მიხედვით.",
   "al2.b":"კორპორატიული სტილის შაბლონები","al2.p":"AI პასუხებს თქვენივე ტონითა და ფორმატით ამზადებს.",
   "al3.b":"ჩართვის მხარდაჭერა","al3.p":"დაყენებიდან პირველ ხელმოწერამდე გვერდში გიდგავართ.",
-  "sec.eyebrow":"უსაფრთხოება","sec.h2":"ოფიციალური კორესპონდენცია — დაცული და აღრიცხული",
+  "sec.eyebrow":"უსაფრთხოება","sec.h2":"ოფიციალური კორესპონდენცია  დაცული და აღრიცხული",
   "sec.lead":"კორესპონდენცია სენსიტიური და იურიდიულად მნიშვნელოვანი დოკუმენტია. სისტემა აგებულია იმ პრინციპით, რომ ყოველ მოქმედებას თან ახლავს კვალი.",
   "ti1.b":"დაშიფვრა და დაცული შენახვა","ti1.p":"მონაცემები იშიფრება გადაცემისა და შენახვისას.",
-  "ti2.b":"წვდომის როლური მართვა","ti2.p":"ვინ რომელ წერილს ხედავს — განისაზღვრება როლების მიხედვით.",
+  "ti2.b":"წვდომის როლური მართვა","ti2.p":"ვინ რომელ წერილს ხედავს  განისაზღვრება როლების მიხედვით.",
   "ti3.b":"სრული აუდიტ-ლოგი","ti3.p":"ყოველი მოქმედება — ვინ, როდის, რა — ჩაიწერება.",
   "audit.head":"აუდიტ-ლოგი · № 04-217","name.ber":"ნ. ბერიძე","name.mai":"გ. მაისურაძე",
-  "audit.r1act":"— პასუხის დამტკიცება","audit.r2act":"— კორექტირება","audit.r3act":"— პასუხის დრაფტის მომზადება","audit.r4act":"— მარშრუტიზაცია: იურიდიული",
+  "audit.r1act":"- პასუხის დამტკიცება","audit.r2act":"— კორექტირება","audit.r3act":"— პასუხის დრაფტის მომზადება","audit.r4act":"— მარშრუტიზაცია: იურიდიული",
   "faq.eyebrow":"ხშირი კითხვები","faq.h2":"ხშირად დასმული კითხვები",
   "q1":"აგზავნის თუ არა AI პასუხს ავტომატურად?",
   "a1":"არა. AI მხოლოდ ამზადებს პასუხის პირველ ვარიანტს. თანამშრომელი ამოწმებს, საჭიროებისამებრ ასწორებს და მხოლოდ დადასტურების შემდეგ ფორმდება ხელმოწერითა და ბეჭდით. გადაწყვეტილებას ყოველთვის ადამიანი იღებს.",
   "q2":"რომელი არხებიდან იღებს წერილებს?",
   "a2":"ელ.ფოსტიდან და სხვა ციფრული არხებიდან. კონკრეტული არხების ნაკრები თქვენს ინფრასტრუქტურას ერგება დანერგვისას.",
   "q3":"როგორ ყალიბდება მარშრუტიზაციის წესები?",
-  "a3":"წესები წინასწარ ისაზღვრება თქვენი ორგანიზაციის სტრუქტურის მიხედვით — თემა, გადაუდებლობა და განყოფილება. ჩართვისას ერთად ვაწყობთ, რომელი წერილი ვის მიდის.",
+  "a3":"წესები წინასწარ ისაზღვრება თქვენი ორგანიზაციის სტრუქტურის მიხედვით თემა, გადაუდებლობა და განყოფილება. ჩართვისას ერთად ვაწყობთ, რომელი წერილი ვის მიდის.",
   "q4":"როგორ მუშაობს ელ-ხელმოწერა და ბეჭედი?",
   "a4":"დამტკიცებული პასუხი ერთი ღილაკით ფორმდება ელექტრონული ხელმოწერითა და ბეჭდით. თქვენს ხელმოწერის ინფრასტრუქტურასთან ინტეგრაციისა და იურიდიული დეტალების კონფიგურაციას დემოზე განვიხილავთ.",
   "q5":"უსაფრთხოა თუ არა მონაცემები?",
   "a5":"მონაცემები იშიფრება, წვდომა იმართება როლების მიხედვით და ყოველ მოქმედებას აუდიტ-ლოგი აღრიცხავს. მონაცემთა შენახვის ვადა და რეზიდენტობა თქვენთან შეთანხმებით განისაზღვრება.",
   "q6":"შესაძლებელია თუ არა სისტემის ჩვენს ორგანიზაციაზე მორგება?",
-  "a6":"დიახ. ყოველ ორგანიზაციასთან ინდივიდუალურად ვაწყობთ განყოფილებების სტრუქტურას, მარშრუტიზაციის წესებსა და კორპორატიულ სტილს — მიიღებთ ზუსტად თქვენზე მორგებულ სისტემას.",
+  "a6":"დიახ. ყოველ ორგანიზაციასთან ინდივიდუალურად ვაწყობთ განყოფილებების სტრუქტურას, მარშრუტიზაციის წესებსა და კორპორატიულ სტილს  მიიღებთ ზუსტად თქვენზე მორგებულ სისტემას.",
   "cta.eyebrow":"დემოს მოთხოვნა","cta.h2":"დაინახეთ თქვენი კანცელარია ავტომატიზებული",
-  "cta.p":"დაგვიტოვეთ მონაცემები და გაჩვენებთ, როგორ ამუშავებს სისტემა თქვენს რეალურ კორესპონდენციას — თქვენივე სტრუქტურითა და სტილით.",
+  "cta.p":"დაგვიტოვეთ მონაცემები და გაჩვენებთ, როგორ ამუშავებს სისტემა თქვენს რეალურ კორესპონდენციას  თქვენივე სტრუქტურითა და სტილით.",
   "cta.pt1":"დემო თქვენს სტრუქტურაზე მორგებული","cta.pt2":"ხელმოწერისა და არქივის განხილვა","cta.pt3":"პასუხი 1 სამუშაო დღეში",
   "f.name":"სახელი","f.nameph":"თქვენი სახელი","f.nameerr":"შეავსეთ სახელი",
   "f.org":"ორგანიზაცია","f.orgph":"ორგანიზაციის სახელი","f.orgerr":"შეავსეთ ორგანიზაცია",
@@ -711,7 +743,7 @@ var I18N = {
   "f.phone":"ტელეფონი","f.msg":"შეტყობინება","f.msgph":"რა ტიპის კორესპონდენციას ამუშავებთ? რა გამოწვევები გაქვთ?",
   "f.submit":"დემოს მოთხოვნის გაგზავნა","form.sending":"იგზავნება...",
   "form.err":"დაფიქსირდა შეცდომა. სცადეთ ხელახლა ან მოგვწერეთ ელ-ფოსტაზე.",
-  "form.note":"სპამს არ მოგწერთ. მონაცემები მხოლოდ დემოს დასაგეგმად გამოიყენება.",
+  // "form.note":"სპამს არ მოგწერთ. მონაცემები მხოლოდ დემოს დასაგეგმად გამოიყენება.",
   "success.h3":"მადლობა! მიღებულია.","success.p":"თქვენი მოთხოვნა მივიღეთ. დაგიკავშირდებით 1 სამუშაო დღეში დემოს დასაგეგმად.",
   "foot.tagline":"კორპორატიული კორესპონდენციის მართვის სისტემა. შემოსული წერილიდან ხელმოწერილ პასუხამდე.",
   "foot.product":"პროდუქტი","foot.company":"კომპანია","foot.legal":"სამართლებრივი",
@@ -719,10 +751,10 @@ var I18N = {
   "foot.rights":"© 2026 AI Chancellery. ყველა უფლება დაცულია."
  },
  en:{
-  "meta.title":"AI Chancellery — Corporate correspondence management",
+  "meta.title":"AI Chancellery Corporate correspondence management",
   "nav.how":"How it works","nav.features":"Capabilities","nav.security":"Security",
   "nav.learn":"Learn more","nav.book":"Request a demo",
-  "hero.eyebrow":"Correspondence management · AI",
+  "hero.eyebrow":"Correspondence management",
   "hero.h1":"From an inbound letter to a ready, <span class=\"hl\">signed reply</span>.",
   "hero.lead":"AI Chancellery automatically processes incoming correspondence by identifying the topic, priority, and responsible department, routing each letter to the right employee, and preparing the first reply draft in your organization's corporate style.",
   "hero.cta1":"Request a demo","hero.cta2":"See how it works",
@@ -734,33 +766,33 @@ var I18N = {
   "anz.lbl":"AI analysis",
   "tag.topicK":"Topic","tag.topicV":"Contract","tag.urgK":"Urgency","tag.urgV":"High","tag.deptK":"Department","tag.deptV":"Legal",
   "route.lbl":"Routing:","route.dept":"Legal department","route.who":"N. Beridze",
-  "draft.tag":"AI · draft","draft.label":"First reply draft — in your corporate style",
+  "draft.tag":"AI · draft","draft.label":"First reply draft  in your corporate style",
   "sign.cap":"Approved · signature",
   "seal.txt":"· official document · certified ",
   "archived.txt":"Registered and archived",
   "flow.st.proc":"Processing","flow.st.sign":"Reviewing","flow.st.done":"Approved",
-  "stat1.n":"In minutes","stat1.l":"from reading to a reply draft",
+  "stat1.n":"1 minute","stat1.l":"from reading to a replying",
   "stat2.n":"1 click","stat2.l":"e-signature and seal",
-  "stat3.l":"of correspondence archived — searchable",
+  "stat3.l":"of correspondence archived  searchable",
   "stat4.l":"automatic processing of inbound letters",
-  "how.eyebrow":"Process","how.h2":"From letter to archive — in four steps",
-  "how.lead":"The system runs in the background. Your staff stay in control — the AI only prepares; a person makes the decision.",
-  "step1.h":"A letter arrives","step1.p":"Email or another channel — the system receives and reads the letter automatically.",
+  "how.eyebrow":"Process","how.h2":"From letter to archive  in four steps",
+  "how.lead":"The system runs in the background. Your staff stay in control  the AI only prepares; a person makes the decision.",
+  "step1.h":"A letter arrives","step1.p":"Email or another channel  the system receives and reads the letter automatically.",
   "step2.h":"AI analyzes","step2.p":"The topic, urgency and the right department are determined.",
   "step3.h":"Routing & draft","step3.p":"The letter goes to the right person, and the AI drafts a first reply.",
   "step4.h":"Approval & signature","step4.p":"The employee reviews, signs with the seal, and the letter is stored in the archive.",
-  "feat.eyebrow":"Capabilities","feat.h2":"The whole chancellery — in one system",
+  "feat.eyebrow":"Capabilities","feat.h2":"The whole chancellery in one system",
   "feat.lead":"From processing an inbound letter to signing and a searchable archive.",
   "f1.h":"Inbound correspondence processing","f1.p":"The system reads letters from email and other channels and determines the topic, urgency and the department needed.",
   "f2.h":"Automatic routing","f2.p":"The letter is sent to the right employee or department based on predefined rules.",
   "f3.h":"Reply generation","f3.p":"The AI drafts a first reply using your organization's corporate-style template. The employee just approves and edits if needed.",
   "f4.h":"E-signature and seal","f4.p":"An approved reply is finalized with an electronic signature and seal in one click.",
-  "spot.h":"Archive & search","spot.p":"Every letter sent and received is stored and searchable — find any letter in seconds by number, topic or date.",
+  "spot.h":"Archive & search","spot.p":"Every letter sent and received is stored and searchable find any letter in seconds by number, topic or date.",
   "arch.q":"contract","arch.r1sub":"Alpha LLC","arch.r1topic":"contract","arch.r2sub":"Ministry","arch.r2topic":"request","arch.r3sub":"Citizen","arch.r3topic":"application",
   "arch.stReplied":"Replied","arch.stArch":"Archived",
   "f5.h":"Scanned document upload","f5.p":"Upload scanned documents to the database and find them in the same unified archive.",
   "adapt.eyebrow":"Tailored to you","adapt.h2":"We set the system up around your structure and style",
-  "adapt.lead":"We shape the department structure, routing rules and corporate reply style individually with each organization — you get a system tailored precisely to you.",
+  "adapt.lead":"We shape the department structure, routing rules and corporate reply style individually with each organization  you get a system tailored precisely to you.",
   "al1.b":"Structure customization","al1.p":"Departments and routing rules to fit your organization.",
   "al2.b":"Corporate-style templates","al2.p":"The AI drafts replies in your own tone and format.",
   "al3.b":"Onboarding support","al3.p":"We're beside you from setup to the first signature.",
@@ -770,7 +802,7 @@ var I18N = {
   "ti2.b":"Role-based access control","ti2.p":"Who sees which letter is defined by role.",
   "ti3.b":"Full audit log","ti3.p":"Every action — who, when, what — is recorded.",
   "audit.head":"Audit log · No. 04-217","name.ber":"N. Beridze","name.mai":"G. Maisuradze",
-  "audit.r1act":"— reply approved","audit.r2act":"— edited","audit.r3act":"— reply draft prepared","audit.r4act":"— routing: Legal",
+  "audit.r1act":"- reply approved","audit.r2act":"— edited","audit.r3act":"— reply draft prepared","audit.r4act":"— routing: Legal",
   "faq.eyebrow":"FAQ","faq.h2":"Questions we get a lot",
   "q1":"Does the AI send replies automatically?",
   "a1":"No. The AI only prepares a first draft. An employee reviews it, edits if needed, and only after approval is it finalized with signature and seal. A human always makes the decision.",
@@ -783,7 +815,7 @@ var I18N = {
   "q5":"Is our data secure?",
   "a5":"Data is encrypted, access is managed by role, and every action is recorded in an audit log. Data retention and residency are set in agreement with you.",
   "q6":"Can the system be tailored to our organization?",
-  "a6":"Yes. We set up the department structure, routing rules and corporate style individually with each organization — you get a system tailored precisely to you.",
+  "a6":"Yes. We set up the department structure, routing rules and corporate style individually with each organization you get a system tailored precisely to you.",
   "cta.eyebrow":"Request a demo","cta.h2":"See your chancellery automated",
   "cta.p":"Leave your details and we'll show you how the system processes your real correspondence — with your own structure and style.",
   "cta.pt1":"A demo tailored to your structure","cta.pt2":"A walkthrough of signing and the archive","cta.pt3":"A reply within 1 business day",
@@ -793,7 +825,7 @@ var I18N = {
   "f.phone":"Phone","f.msg":"Message","f.msgph":"What kind of correspondence do you handle? What challenges do you face?",
   "f.submit":"Send demo request","form.sending":"Sending...",
   "form.err":"Something went wrong. Please try again or email us.",
-  "form.note":"No spam. Your details are used only to schedule the demo.",
+  // "form.note":"No spam. Your details are used only to schedule the demo.",
   "success.h3":"Thank you! Received.","success.p":"We've received your request. We'll contact you within 1 business day to schedule the demo.",
   "foot.tagline":"A corporate correspondence management system. From an inbound letter to a signed reply.",
   "foot.product":"Product","foot.company":"Company","foot.legal":"Legal",
